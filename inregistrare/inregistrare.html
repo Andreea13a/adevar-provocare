@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Înregistrare Utilizator</title>
+  <link rel="stylesheet" href="inregistrare.css">
+</head>
+<body>
+
+  <!-- Div pentru formular -->
+  <div id="step1" class="form-container">
+    <h1>Detalii personale</h1>
+    <form id="formStep1">
+      <input type="text" name="firstName" placeholder="Prenume" required><br>
+      <input type="text" name="lastName" placeholder="Nume" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="text" name="phone" placeholder="Număr de telefon (+373...)" required><br>
+      <button type="submit">Continuă</button>
+    </form>
+  </div>
+
+  <div id="step2" class="form-container" style="display: none;">
+    <h1>Setează parola</h1>
+    <form id="formStep2">
+      <input type="password" name="password" placeholder="Parola (minim 8 caractere)" required><br>
+      <button type="submit">Înregistrează-te</button>
+    </form>
+  </div>
+
+  <div id="step3" class="form-container" style="display: none;">
+    <h1>V-ați înregistrat cu succes!</h1>
+    <p>Mulțumim pentru înregistrare!</p>
+  </div>
+
+  <script src="inregistrare.js"></script>
+</body>
+</html>
