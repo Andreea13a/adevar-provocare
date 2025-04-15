@@ -1,0 +1,92 @@
+/* Stilizare pentru bara de navigare */
+
+    .navbar {
+        display: flex;
+        justify-content: space-between; /* Distribuie spațiul între secțiuni */
+        align-items: center; /* Aliniază vertical elementele */
+        background-color: #000000; /* Fundalul barei de navigare */
+        padding: 10px 20px; /* Spațiere internă */
+        color: white; /* Culoarea textului */
+        width: 100%; /* Ocupă întreaga lățime a paginii */
+        position: fixed; /* Bara rămâne fixată în partea de sus */
+        top: 0; /* Poziționează bara în partea de sus */
+        left: 0; /* Aliniază bara la marginea stângă */
+        z-index: 1000; /* Asigură că bara este deasupra altor elemente */
+    }
+/* Bara de căutare */
+.search-container {
+    display: flex;
+    align-items: center; /* Aliniază vertical bara de căutare */
+    position: relative; /* Permite poziționarea absolută a butonului */
+    width: 100%; /* Ocupă întreaga lățime disponibilă */
+    max-width: 300px; /* Lățime maximă pentru bara de căutare */
+    margin-right: 20px; /* Spațiu între bara de căutare și alte elemente */
+    
+}
+
+.search-input {
+    width: 80%; /* Ocupă întreaga lățime a containerului */
+    padding: 10px 40px 10px 10px; /* Spațiu intern (lasă loc pentru lupa din dreapta) */
+    border: none; /* Elimină bordura implicită */
+    border-radius: 30px; /* Colțuri rotunjite */
+    outline: none; /* Elimină conturul implicit */
+    font-size: 16px; /* Dimensiunea textului */
+    color:black;
+    background-color: #f4b9da;
+}
+.search-input::placeholder {
+    color: #000000; /* Culoarea dorită pentru textul placeholder */
+    font-style: italic; /* Opțional: stilizează textul */
+    opacity: 1; /* Asigură că textul este complet vizibil */
+}
+
+.search-button {
+    position: absolute; /* Poziționează butonul în interiorul containerului */
+    right: -20px; /* Poziționează butonul în partea dreaptă a casetei */
+    top: 20%; /* Centrează vertical butonul */
+    transform: translateY(-50%); /* Ajustează poziția verticală */
+    background-color: transparent; /* Fundal transparent */
+    border: none; /* Elimină bordura */
+    cursor: pointer; /* Cursor pointer */
+    font-size: 16px; /* Dimensiunea simbolului Unicode */
+    color: #333; /* Culoarea simbolului */
+}
+
+
+/* Opțiuni pe mijloc */
+.nav-options {
+    display: flex; /* Afișează elementele pe o linie */
+    justify-content: center; /* Centrează opțiunile pe mijloc */
+    align-items: center; /* Aliniază vertical elementele */
+    gap: 20px; /* Spațiu între opțiuni */
+}
+
+.nav-options a {
+    color: white; /* Culoarea textului */
+    text-decoration: none; /* Elimină sublinierea implicită */
+    font-weight: bold; /* Text îngroșat */
+}
+
+.nav-options a:hover {
+    text-decoration: underline; /* Subliniere la hover */
+}
+
+/* Buton de log out */
+.logout-container {
+    display: flex;
+    align-items: center; /* Aliniază vertical butonul */
+    
+}
+
+.logout-button {
+    background-color: #ff81c9;
+    color: rgb(248, 238, 245); /* Culoarea textului */
+    border: none; /* Elimină bordura */
+    padding: 8px 12px; /* Spațiere internă */
+    border-radius: 20px; /* Colțuri rotunjite */
+    cursor: pointer; /* Cursor pointer */
+}
+
+.logout-button:hover {
+    background-color: #ff0084; /* Fundal mai închis la hover */
+}

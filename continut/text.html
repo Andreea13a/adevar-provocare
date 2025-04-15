@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Adevar sau Provocare</title>
+    <link rel="stylesheet" href="../navbar/navbar.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="navbar"></div> <!-- Bara de navigare va fi încărcată aici -->
     <header>
         <h1>Adevăr sau Provocare</h1>
-        <p>Joacă un joc clasic cu prietenii tăi!</p>
+        <p>Ai curaj să riști?</p>
     </header>
     <main>
         <section id="game">
@@ -18,9 +20,17 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Adevăr sau Provocare. Toate drepturile rezervate.</p>
+        <p>&copy; 2025 Adevăr sau Provocare. Toate drepturile rezervate. Munteanu Andreea. Grupa PTPP</p>
     </footer>
-
-    <script src="script.js"></script>
+    <!-- Codul pentru încărcarea barei de navigare -->
+    <script>
+        fetch("../navbar/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data; // Încarcă bara de navigare
+            });
+    </script>
+    <script src="../navbar/navbar.js"></script> <!-- Funcționalitate pentru bara de navigare -->
+    <script src="project.js"></script>
 </body>
 </html>
