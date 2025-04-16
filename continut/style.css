@@ -19,7 +19,7 @@ body {
 
 header {
     background-color:#000000;
-    color: #eb75ac;
+    color: #ff0084;;
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -39,12 +39,53 @@ p {
 main {
     margin-top: 20px;
 }
+main h2 {
+    color: white; /* Text alb */
+    font-style: italic;
+    font-size: 1.7rem; /* Dimensiune text */
+    text-align: center; /* Aliniere centrală */
+    margin-top: 20px; /* Spațiu deasupra */
+    font-weight: bold; /* Text îngroșat */
+}
 
 #game {
     background-color:#f77caf
     border-radius: 10px;
     padding: 20px;
     
+}
+/* Stilizare pentru secțiunea de categorii */
+#categories {
+    margin-top: 20px;
+    text-align: center;
+    color: #eb75ac; /* Culoarea textului */
+}
+
+#categories h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Stilizare pentru butoane */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spațiu între butoane */
+}
+
+.category-buttons button {
+    background-color: #eb75ac; /* Fundalul butoanelor */
+    color: white; /* Culoarea textului */
+    border: none; /* Elimină bordura */
+    padding: 10px 20px; /* Spațiere internă */
+    border-radius: 5px; /* Colțuri rotunjite */
+    font-size: 1rem; /* Dimensiunea textului */
+    cursor: pointer; /* Cursor pointer */
+    transition: background-color 0.3s ease; /* Tranziție pentru hover */
+}
+
+.category-buttons button:hover {
+    background-color: #ff0084; /* Fundal mai închis la hover */
 }
 
 button {
@@ -62,7 +103,42 @@ button {
 button:hover {
     background-color: #ff0084;
 }
+.truth-dare-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
+.truth-dare-buttons button {
+    background-color: #eb75ac;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.truth-dare-buttons button:hover {
+    background-color:#ff0084 ;
+}
+#continueBtn {
+    background-color: #eb75ac;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#continueBtn:hover {
+    background-color: #ff0084;
+}
 #question {
     margin-top: 20px;
     font-size: 1.5rem;

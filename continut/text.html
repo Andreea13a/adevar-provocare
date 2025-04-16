@@ -5,6 +5,7 @@
     <title>Adevar sau Provocare</title>
     <link rel="stylesheet" href="../navbar/navbar.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../footer/footer.css">
 </head>
 <body>
     <div id="navbar"></div> <!-- Bara de navigare va fi încărcată aici -->
@@ -13,15 +14,15 @@
         <p>Ai curaj să riști?</p>
     </header>
     <main>
-        <section id="game">
-            <button id="trueBtn">Adevăr</button>
-            <button id="dareBtn">Provocare</button>
-            <p id="question"></p>
+        <section id="categories">
+            <h2>Alege o categorie:</h2> <!-- Textul de deasupra butoanelor -->
+            <div class="category-buttons">
+                <button id="familyBtn">Familie</button>
+                <button id="friendsBtn">Prieteni</button>
+                <button id="couplesBtn">Cupluri</button>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Adevăr sau Provocare. Toate drepturile rezervate. Munteanu Andreea. Grupa PTPP</p>
-    </footer>
     <!-- Codul pentru încărcarea barei de navigare -->
     <script>
         fetch("../navbar/navbar.html")
@@ -30,6 +31,28 @@
                 document.getElementById("navbar").innerHTML = data; // Încarcă bara de navigare
             });
     </script>
+    <script>
+        fetch("../navbar/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data; // Încarcă bara de navigare
+    
+                // Adaugă funcționalitatea pentru butonul de log out
+                document.querySelector(".logout-button").addEventListener("click", function () {
+                    alert("Te-ai delogat cu succes!");
+                    window.location.href = "../autentificare/index.html"; // Redirecționează către pagina de autentificare
+                });
+            });
+    </script>
+    <script>
+        fetch("../footer/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data); // Adaugă footer-ul la finalul paginii
+            })
+            .catch(error => console.error("Eroare la încărcarea footer-ului:", error));
+    </script>
+   
     <script src="../navbar/navbar.js"></script> <!-- Funcționalitate pentru bara de navigare -->
     <script src="project.js"></script>
 </body>

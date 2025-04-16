@@ -4,7 +4,7 @@
         display: flex;
         justify-content: space-between; /* Distribuie spațiul între secțiuni */
         align-items: center; /* Aliniază vertical elementele */
-        background-color: #000000; /* Fundalul barei de navigare */
+        background-color: #be839f; /* Fundalul barei de navigare */
         padding: 10px 20px; /* Spațiere internă */
         color: white; /* Culoarea textului */
         width: 100%; /* Ocupă întreaga lățime a paginii */
@@ -32,10 +32,10 @@
     outline: none; /* Elimină conturul implicit */
     font-size: 16px; /* Dimensiunea textului */
     color:black;
-    background-color: #f4b9da;
+    background-color: #ff0084;;
 }
 .search-input::placeholder {
-    color: #000000; /* Culoarea dorită pentru textul placeholder */
+    color: white; /* Culoarea dorită pentru textul placeholder */
     font-style: italic; /* Opțional: stilizează textul */
     opacity: 1; /* Asigură că textul este complet vizibil */
 }
@@ -53,20 +53,9 @@
 }
 
 
-/* Opțiuni pe mijloc */
-.nav-options {
-    display: flex; /* Afișează elementele pe o linie */
-    justify-content: center; /* Centrează opțiunile pe mijloc */
-    align-items: center; /* Aliniază vertical elementele */
-    gap: 20px; /* Spațiu între opțiuni */
+.search-button:hoover{
+    color:#ff0084;
 }
-
-.nav-options a {
-    color: white; /* Culoarea textului */
-    text-decoration: none; /* Elimină sublinierea implicită */
-    font-weight: bold; /* Text îngroșat */
-}
-
 .nav-options a:hover {
     text-decoration: underline; /* Subliniere la hover */
 }
@@ -79,7 +68,7 @@
 }
 
 .logout-button {
-    background-color: #ff81c9;
+    background-color: #ff0084;;
     color: rgb(248, 238, 245); /* Culoarea textului */
     border: none; /* Elimină bordura */
     padding: 8px 12px; /* Spațiere internă */
@@ -88,5 +77,5 @@
 }
 
 .logout-button:hover {
-    background-color: #ff0084; /* Fundal mai închis la hover */
+    background-color: #eb75ac; /* Fundal mai închis la hover */
 }
