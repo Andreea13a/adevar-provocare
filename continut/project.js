@@ -23,12 +23,13 @@ function loadQuestions(category, type) {
             const randomIndex = Math.floor(Math.random() * data.length);
             const question = data[randomIndex];
             console.log("Întrebare selectată:", question); // Debugging
-            displayQuestion(question);
+            displayQuestion(question, category); // Trece categoria ca parametru
         })
         .catch(error => console.error("Eroare la încărcarea fișierului JSON:", error));
 }
 
-function displayQuestion(text) {
+// Funcție pentru a afișa întrebarea și butonul "Continuă"
+function displayQuestion(text, category) {
     if (!text) {
         console.error("Nu există nicio întrebare de afișat!");
         return;
@@ -36,7 +37,16 @@ function displayQuestion(text) {
     console.log("Întrebare afișată:", text); // Debugging
     mainSection.innerHTML = `
         <h2>${text}</h2>
+        <button id="continueBtn">Continuă</button>
     `;
+
+    // Adaugă eveniment pentru butonul "Continuă"
+    const continueBtn = document.getElementById("continueBtn");
+    if (continueBtn) {
+        continueBtn.addEventListener("click", () => showTruthOrDareButtons(category));
+    } else {
+        console.error("Butonul 'Continuă' nu a fost creat!");
+    }
 }
 
 // Funcție pentru a afișa butoanele "Adevăr" și "Provocare"
