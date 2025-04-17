@@ -13,6 +13,26 @@
         left: 0; /* Aliniază bara la marginea stângă */
         z-index: 1000; /* Asigură că bara este deasupra altor elemente */
     }
+    .navbar-profile {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Spațiu între poză și nume */
+        margin-right: 20px; /* Spațiu față de butonul de log out */
+    }
+    
+    .profile-pic {
+        width: 40px; /* Dimensiunea imaginii */
+        height: 40px; /* Dimensiunea imaginii */
+        border-radius: 50%; /* Face imaginea rotundă */
+        object-fit: cover; /* Ajustează imaginea pentru a se potrivi în cerc */
+        border: 2px solid #fff; /* Bordură albă */
+    }
+    
+    .profile-name {
+        font-size: 1rem; /* Dimensiunea textului */
+        color: white; /* Culoarea textului */
+        font-weight: bold; /* Text îngroșat */
+    }
 /* Bara de căutare */
 .search-container {
     display: flex;
@@ -32,7 +52,7 @@
     outline: none; /* Elimină conturul implicit */
     font-size: 16px; /* Dimensiunea textului */
     color:black;
-    background-color: #ff0084;;
+    background-color: #ff0084;
 }
 .search-input::placeholder {
     color: white; /* Culoarea dorită pentru textul placeholder */
@@ -59,11 +79,27 @@
 .nav-options a:hover {
     text-decoration: underline; /* Subliniere la hover */
 }
+/* Buton de log in */
+.login-button {
+    background-color: #32b8e1; /* Fundal albastru */
+    color: white; /* Text alb */
+    border: none; /* Elimină bordura */
+    padding: 8px 12px; /* Spațiere internă */
+    border-radius: 20px; /* Colțuri rotunjite */
+    cursor: pointer; /* Cursor pointer */
+    margin-right: 10px; /* Spațiu între butoane */
+}
+
+.login-button:hover {
+    background-color: #006f97; /* Fundal mai închis la hover */
+}
 
 /* Buton de log out */
 .logout-container {
     display: flex;
     align-items: center; /* Aliniază vertical butonul */
+    margin-left: 10px; /* Împinge butoanele spre dreapta */
+    gap: 5px; /* Spațiu între butoane */
     
 }
 
@@ -78,4 +114,27 @@
 
 .logout-button:hover {
     background-color: #eb75ac; /* Fundal mai închis la hover */
+}
+.stats-container {
+    position: fixed; /* Fixează containerul în partea stângă */
+    top: 100px; /* Distanță față de partea de sus */
+    left: 20px; /* Distanță față de partea stângă */
+    background-color: #be839f; /* Fundal */
+    color: white; /* Text alb */
+    padding: 15px; /* Spațiere internă */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+    width: 200px; /* Lățime fixă */
+    font-family: Arial, sans-serif; /* Font */
+}
+
+.stats-container h3 {
+    margin-bottom: 10px; /* Spațiu sub titlu */
+    font-size: 1.2rem; /* Dimensiune titlu */
+    text-align: center; /* Aliniere centrală */
+}
+
+.stats-container p {
+    margin: 5px 0; /* Spațiu între paragrafe */
+    font-size: 1rem; /* Dimensiune text */
 }

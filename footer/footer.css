@@ -1,5 +1,5 @@
 footer {
-    background-color: #a97c92; /* Fundal închis */
+    background-color: #be839f; /* Fundal închis */
     text-align: center; /* Aliniere centrală */
     padding: 10px 0; /* Spațiere sus-jos */
     position: fixed; /* Fixează footer-ul în partea de jos */
@@ -10,5 +10,5 @@ footer {
 
 footer p {
     margin: 5px 0; /* Spațiere între paragrafe */
-    color: rgb(0, 0, 0);
+    color: #000000;
 }
